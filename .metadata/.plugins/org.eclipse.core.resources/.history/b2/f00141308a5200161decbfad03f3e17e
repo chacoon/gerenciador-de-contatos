@@ -1,0 +1,30 @@
+package br.com.contato.controller;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+
+public class Root_Controller implements Initializable{
+
+	@FXML TextField txt_nome, txt_tel;
+	@FXML Button btn_inserir;
+	@FXML ListView<String> lst_contatos;
+
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		// TODO Auto-generated method stub
+	}
+
+	@FXML public void inserir_contato() {
+		String contato = txt_nome.getText() + " - " + txt_tel.getText();
+
+		lst_contatos.getItems().add(contato);
+
+		txt_nome.clear();
+		txt_tel.clear();
+	}
+
+}

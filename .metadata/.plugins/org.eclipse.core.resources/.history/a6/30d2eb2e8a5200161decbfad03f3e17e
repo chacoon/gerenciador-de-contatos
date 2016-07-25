@@ -1,0 +1,5 @@
+package br.com.contato.helper;
+
+public class MySQL_Connect {
+
+}
